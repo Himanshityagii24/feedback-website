@@ -1,9 +1,12 @@
+"use client"
+
 import React from "react";
 import styles from "./navbar.module.css";
 import Image from "next/image";
 import Link from "next/link";
 
 import ThemeToggle from "../themeToggle/ThemeToggle";
+import { signOut } from "next-auth/react";
 
 const Navbar = () => {
   return (
@@ -16,11 +19,11 @@ const Navbar = () => {
       <div className={styles.logo}>Feedback!</div>
       <div className={styles.links}>
        <ThemeToggle/>
-       <Link href="/" className={styles.link}>Login</Link>
+       <Link href="/LoginPage" className={styles.link}>Login</Link>
         <Link href="/" className={styles.link}>Homepage</Link>
         <Link href="/" className={styles.link}>Contact</Link>
         <Link href="/" className={styles.link}>About</Link>
-    
+        <span className={styles.link} onClick={signOut}>Logout</span>
       </div>
     </div>
   );
