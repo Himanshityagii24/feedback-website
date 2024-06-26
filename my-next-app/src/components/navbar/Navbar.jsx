@@ -5,10 +5,13 @@ import styles from "./navbar.module.css";
 import Image from "next/image";
 import Link from "next/link";
 
+
 import ThemeToggle from "../themeToggle/ThemeToggle";
 import { signOut } from "next-auth/react";
 
+
 const Navbar = () => {
+
   return (
     <div className={styles.container}>
       <div className={styles.social}>

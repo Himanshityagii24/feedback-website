@@ -1,7 +1,7 @@
-// src/components/featured/Featured.jsx
 import React from "react";
 import styles from "./featured.module.css";
 import Image from "next/image";
+import Link from "next/link";
 
 const Featured = () => {
   return (
@@ -21,7 +21,9 @@ const Featured = () => {
             laudantium repellat ducimus unde aspernatur fuga. Quo, accusantium
             quisquam! Harum unde sit culpa debitis.
           </p>
-          <button className={styles.button}>Rate now!</button>
+          <Link href="/feedback" legacyBehavior>
+            <a className={styles.button}>Rate now!</a>
+          </Link>
         </div>
       </div>
     </div>
